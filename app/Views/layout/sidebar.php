@@ -36,6 +36,16 @@
             <?php }else{ ?>
               <li><a class="app-menu__item" href="<?= base_url('data_petugas') ?>"><i class="app-menu__icon fa fa-user"></i><span class="app-menu__label">Petugas</span></a></li>
             <?php } ?>
+            <?php if($page == "kader"){ ?>
+              <li><a class="app-menu__item active" href="<?= base_url('data_kader') ?>"><i class="app-menu__icon fa fa-user"></i><span class="app-menu__label">Kader</span></a></li>
+            <?php }else{ ?>
+              <li><a class="app-menu__item" href="<?= base_url('data_kader') ?>"><i class="app-menu__icon fa fa-user"></i><span class="app-menu__label">Kader</span></a></li>
+            <?php } ?>
+            <?php if($page == "simpatisan"){ ?>
+              <li><a class="app-menu__item active" href="<?= base_url('data_simpatisan') ?>"><i class="app-menu__icon fa fa-user"></i><span class="app-menu__label">Simpatisan</span></a></li>
+            <?php }else{ ?>
+              <li><a class="app-menu__item" href="<?= base_url('data_simpatisan') ?>"><i class="app-menu__icon fa fa-user"></i><span class="app-menu__label">Simpatisan</span></a></li>
+            <?php } ?>
           <?php }else{ ?>
               <li><a class="app-menu__item active" href="<?= base_url('input_suara') ?>"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Input Suara</span></a></li>
           <?php } ?>

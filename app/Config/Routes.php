@@ -36,6 +36,8 @@ $routes->get('/laporan_suara/(:num)', 'Home::laporan_suara/$1');
 $routes->get('/admin', [\App\Controllers\Admin\DashboardController::class, 'index']);
 $routes->get('/desa', [\App\Controllers\Admin\DesaController::class, 'index']);
 $routes->get('/data_petugas', [\App\Controllers\Admin\DataPetugasController::class, 'index']);
+$routes->get('/data_kader', [\App\Controllers\Admin\DataKaderController::class, 'index']);
+$routes->get('/data_simpatisan', [\App\Controllers\Admin\DataSimpatisanController::class, 'index']);
 $routes->get('/input_suara', [\App\Controllers\Petugas\InputSuaraController::class, 'index']);
 $routes->post('input_suara/upload', [\App\Controllers\Petugas\InputSuaraController::class, 'upload']);
 $routes->get('/login', 'Login::index');
