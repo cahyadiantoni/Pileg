@@ -6,9 +6,8 @@ use CodeIgniter\Model;
 
 class SimpatisanModel extends Model
 {
-    function getData($where){
+    function getData(){
         $builder = $this->db->table('simpatisan');
-        $builder->where($where);
 
         return $builder->get()->getResult();
     }

@@ -6,9 +6,8 @@ use CodeIgniter\Model;
 
 class KaderModel extends Model
 {
-    function getData($where){
+    function getData(){
         $builder = $this->db->table('kader');
-        $builder->where($where);
 
         return $builder->get()->getResult();
     }
