@@ -26,6 +26,7 @@ class DataSimpatisanController extends BaseController
     {
         $getdata = $this->simpatisan_model->getData();
         $getdataKader = $this->kader_model->getData();
+        $getDesa = $this->desa_model->getData();
 
         $data = array(
             'page' => 'simpatisan',
@@ -34,6 +35,7 @@ class DataSimpatisanController extends BaseController
             'dataSimpatisan' => $getdata,
             'dataKader' => $getdataKader,
             'level' => $this->session->seslevel,
+            'dataDesa' => $getDesa,
         );
 
         return view('admin/simpatisan', $data);
