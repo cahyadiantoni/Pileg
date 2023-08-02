@@ -25,6 +25,7 @@ class DataKaderController extends BaseController
     public function index()
     {
         $getdata = $this->kader_model->getData();
+        $getDesa = $this->desa_model->getData();
 
         $data = array(
             'page' => 'kader',
@@ -32,6 +33,7 @@ class DataKaderController extends BaseController
             'is_login' => $this->session->has('sesusername'),
             'dataKader' => $getdata,
             'level' => $this->session->seslevel,
+            'dataDesa' => $getDesa,
         );
 
         return view('admin/kader', $data);

@@ -98,12 +98,24 @@
                     <input class="form-control" name="hp" id="hp" type="number">
                 </div>
                 <div class="form-group">
-                <label for="desa">Desa</label>
-                <input class="form-control" name="desa" id="desa" type="text" placeholder="Masukan Desa">
+                  <label for="desa">Desa</label>
+                  <select class="form-control" id="desa" name="desa">
+                    <option value="null">Pilih Desa</option>
+                    <?php foreach($dataDesa as $data){?>
+                    <option value="<?= $data->nama_desa ?>"><?= $data->nama_desa ?></option>
+                    <?php } ?>
+                  </select>
+                <!-- <input class="form-control" name="desa" id="desa" type="text" placeholder="Masukan Desa"> -->
                 </div>
                 <div class="form-group">
-                <label for="kecamatan">Kecamatan</label>
-                <input class="form-control" name="kecamatan" id="kecamatan" type="text" placeholder="Masukan Kecamatan">
+                  <label for="kecamatan">Kecamatan</label>
+                  <select class="form-control" id="kecamatan" name="kecamatan">
+                    <option value="null">Pilih Kecamatan</option>
+                    <?php foreach($dataDesa as $data){?>
+                    <option value="<?= $data->nama_kecamatan ?>"><?= $data->nama_kecamatan ?></option>
+                    <?php } ?>
+                  </select>
+                <!-- <input class="form-control" name="kecamatan" id="kecamatan" type="text" placeholder="Masukan Kecamatan"> -->
                 </div>
             </div>
             <div class="modal-footer">
@@ -143,11 +155,29 @@
                 </div>
                 <div class="form-group">
                     <label for="desa">Desa</label>
-                    <input class="form-control" name="desa" id="desa" type="text" value="<?= $data->desa ?>">
+                    <select class="form-control" id="desa" name="desa">
+                      <option value="<?= $data->desa ?>">Pilih Desa</option>
+                      <?php foreach($dataDesa as $desa){
+                        if($data->desa == $desa->nama_desa){ ?>
+                        <option value="<?= $desa->nama_desa ?>" selected><?= $desa->nama_desa ?></option>
+                        <?php }else{ ?>
+                        <option value="<?= $desa->nama_desa ?>"><?= $desa->nama_desa ?></option>
+                      <?php }} ?>
+                    </select>
+                    <!-- <input class="form-control" name="desa" id="desa" type="text" value="<?= $data->desa ?>"> -->
                 </div>
                 <div class="form-group">
                     <label for="kecamatan">Kecamatan</label>
-                    <input class="form-control" name="kecamatan" id="kecamatan" type="text" value="<?= $data->kecamatan ?>">
+                    <select class="form-control" id="kecamatan" name="kecamatan">
+                      <option value="<?= $data->kecamatan ?>">Pilih Kecamatan</option>
+                      <?php foreach($dataDesa as $desa){
+                        if($data->kecamatan == $desa->nama_kecamatan){ ?>
+                        <option value="<?= $desa->nama_kecamatan ?>" selected><?= $desa->nama_kecamatan ?></option>
+                        <?php }else{ ?>
+                        <option value="<?= $desa->nama_kecamatan ?>"><?= $desa->nama_kecamatan ?></option>
+                      <?php }} ?>
+                    </select>
+                    <!-- <input class="form-control" name="kecamatan" id="kecamatan" type="text" value="<?= $data->kecamatan ?>"> -->
                 </div>
             </div>
             <div class="modal-footer">
